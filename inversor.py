@@ -14,8 +14,7 @@ class Stack:
             node.next = self.top
             self.top = node
             self._size += 1
-            pointer = self.top
-
+            
         #até aqui ele vai empilhar as letras
         while self.top: #tenho que fazer ele percorrer a palavra inteira até acabar
             print(self.top.data)
