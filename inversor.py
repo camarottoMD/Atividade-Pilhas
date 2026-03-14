@@ -8,22 +8,21 @@ class Stack:
         self.top = None
         self._size = 0
 
-    def invert(self, data):
+    def push(self, data):
         for letter in data:
             node = Node(letter)
             node.next = self.top
             self.top = node
             self._size += 1
             
-        #até aqui ele vai empilhar as letras
-        while self.top: #tenho que fazer ele percorrer a palavra inteira até acabar
+    def invert(self):
+        while self.top:
             print(self.top.data)
             self.top = self.top.next
             
 
-
-
 if __name__ == "__main__":
     pilha = Stack()
     palavra = input("Insira uma palavra")
-    pilha.invert(palavra)
+    pilha.push(palavra)
+    pilha.invert()
